@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Own CSS Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css" type="text/css"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>CSS Properties, Selector and their Specificity</h1>
+    <h2>Table of 10 Essential CSS Properties</h2>
+    <table>
+        <thead>
+            <th>Property Name</th>
+            <th>Description</th>
+            <th>Code Example</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="code">color</span></td>
+                <td>Sets the text color</td>
+                <td><span class="code">color: blue;</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">Background-color</span></td>
+                <td>Define the background color of an element</td>
+                <td><span class="code">Background-color: lightgrey;</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">font-size</span></td>
+                <td>Speficies the text size</td>
+                <td><span class="code">font-size: 18px;</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">font-family</span></td>
+                <td>Define the font type used</td>
+                <td><span class="code">font-family: Arial, Sans-serif;</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">text-align</span></td>
+                <td>Sets text alignment (left, center, right)</td>
+                <td><span class="code">text-align: center;</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">margin</span></td>
+                <td>add external spacing around an element</td>
+                <td><span class="code">margin: 10px;</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">padding</span></td>
+                <td>Adds internal spacing inside the element</td>
+                <td><span class="code">padding: 5px;</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">border</span></td>
+                <td>Adds a border around the element</td>
+                <td><span class="code">border: 2px solid black;</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">display</span></td>
+                <td>Defines how an element is displayed (block, inline, flex, etc.)</td>
+                <td><span class="code">display: flex;</span></td>
+            <tr>
+                <td><span class="code">position</span></td>
+                <td>Controls element placement (relative, absolute, fixed)</td>
+                <td><span class="code">position: absolute; top: 20px; left: 10px;</span></td>
+            </tr>                
+            </tr>
+        </tbody>
+    </table>
+    <h2>Table of Main CSS Selectors and Their Specificity</h2>
+    <table>
+        <thead>
+            <th>Selectors Name</th>
+            <th>Description</th>
+            <th>Code Example</th>
+            <th>Specifity</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="code">*</span>(Universal)</td>
+                <td>Select all elements</td>
+                <td><span class="code">* { margin: 0; }</span></td>
+                <td>0, 0, 0, 0</td>
+            </tr>
+            <tr>
+                <td><span class="code">element</span>(type)</td>
+                <td>Select all elements of the given type (<span class="code">p</span>,<span class="code">div</span>, etc.)</td>
+                <td><span class="code">p { color: red; }</span></td>
+                <td>0, 0, 0, 1</td>
+            </tr>
+            <tr>
+                <td><span class="code">.class</span></td>
+                <td>Select all elements with this class</td>
+                <td><span class="code">.title { font-size: 20px; }</span></td>
+                <td>0, 0, 1, 0</td>
+            </tr>
+            <tr>
+                <td><span class="code">#id</span></td>
+                <td>Select an element with this <bold>unique ID</bold></td>
+                <td><span class="code">#main { background-color: yellow; }</span></td>
+                <td>0, 1, 0, 0</td>
+            </tr>
+            <tr>
+                <td><span class="code">element.class</span></td>
+                <td>Select a specific element with a class</td>
+                <td><span class="code">p.highlight { color: blue; }</span></td>
+                <td>0, 0, 1, 1</td>
+            </tr>
+            <tr>
+                <td><span class="code">element#id</span></td>
+                <td>Select a specific element with an ID</td>
+                <td><span class="code">div#container { padding: 10px; }</span></td>
+                <td>0, 1, 0, 1</td>
+            </tr>
+            <tr>
+                <td><span class="code">attribute</span></td>
+                <td>Select elements containing a given attribute</td>
+                <td><span class="code">[type="text"] { border: 1ps solid black; }</span></td>
+                <td>0, 0, 1, 0</td>
+            </tr>
+            <tr>
+                <td><span class="code">pseudo-class</span></td>
+                <td>Apply a style based on an element's state</td>
+                <td><span class="code">a:hover { color: green; }</span></td>
+                <td>0, 0, 1, 0</td>
+            </tr>
+            <tr>
+                <td><span class="code">pseudo-element</span></td>
+                <td>Target part of an element</td>
+                <td><span class="code">p::first-line { font-weight: bold; }</span></td>
+                <td>0, 0, 1, 0</td>
+            </tr>
+            <tr>
+                <td><span class="code">combinators</span></td>
+                <td>Select elements based on their relationship in the DOM</td>
+                <td><span class="code">div > p { margin: 10px; }</span></td>
+                <td>Depends on structure</td>
+            </tr>
+    </body>
+</html>

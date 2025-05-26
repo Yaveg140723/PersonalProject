@@ -1,0 +1,35 @@
+body {
+    font-family: Merriweather, Arial, sans-serif;
+    font-size: 13px;
+    background-color: lemonchiffon;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    color: dodgerblue;
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  table {
+    border: 2px solid darkgrey;
+    width: 790px;
+    margin: 0 auto;
+    border-radius: 3px;
+  }
+  
+  thead {
+    background-color: skyblue;
+  }
+  
+  td {
+    border-top: 1px solid darkgray
+  }
+  
+  .code {
+    font-family: monospace;
+    background-color: paleturquoise;
+  }
